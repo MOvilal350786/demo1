@@ -1,0 +1,54 @@
+<% include ./partials/header.ejs %>
+
+<div class="w-full h-screen bg-zinc-800 text-white">
+
+    <div class="flex justify-center -ml-12">
+
+        <div class="flex flex-col gap-2">
+            <h1 class="ml-5 text-2xl">Create New Post</h1>
+        <button id="but" class="bg-white text-black hover:text-white hover:bg-black mb-5 rounded-xl">Select_Image</button>
+        </div>
+
+    </div>
+   
+
+  <div class="flex justify-center">
+    <form
+      action="/CreatePost"
+      method="post"
+      enctype="multipart/form-data"
+      class="flex flex-col gap-5"
+    >
+      <input  id="inp" hidden type="file" name="Postimage" />
+      <input
+        class="block w-2/3 py-2 px-2 rounded-xl text-xl text-black"
+        type="text"
+        name="title"
+        placeholder="Title"
+      />
+      <textarea
+        name="Description"
+        id=""
+        class="block px-5 w-2/3 rounded-xl h-60 text-black"
+        type="text"
+        placeholder="Description"
+      ></textarea>
+
+      <input
+        class="rounded-xl text-xl hover:bg-red-600 hover:text-black"
+        type="submit"
+        name="submit"
+      />
+    </form>
+
+  
+   
+  </div>
+</div>
+<script>
+    document.querySelector("#but").addEventListener("click", function(){
+        document.querySelector("#inp").click();
+    })
+</script>
+
+<% include ./partials/footer.ejs %>

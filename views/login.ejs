@@ -1,0 +1,47 @@
+<% include ./partials/header.ejs %>
+<div class="flex self-center justify-center m-20 p-20">
+  <div class="w-[500px] h-[400px] bg-yellow-200 rounded-xl pb-10">
+    <h1 class="m-[20px] text-2xl">login If Already Registered Account</h1>
+
+    <form acrion="/login" method="post">
+      <input
+        class="m-[20px] ml-20 px-20 py-[10px] rounded-xl"
+        type="username"
+        name="username"
+        placeholder="username"
+      />
+      <input
+        class="m-[20px] ml-20 px-20 py-[10px] rounded-xl"
+        type="password"
+        name="password"
+        placeholder="password"
+      />
+
+      <input
+        class="block hover:bg-red-600 px-[50px] ml-[165px] mt-[20px] mb-[20px] rounded-full text-xl bg-white text-black hover:text-white"
+        type="submit"
+        value="Login"
+      />
+
+      <a href="/" class="ml-[70px] text-red-600"
+        >If Account Already Exist Go to the Login Page</a
+      >
+    </form>
+
+
+    <div class="flex justify-center items-center ">
+      <div class=" mt-5 bg-white hover:bg-black text-black hover:text-white flex justify-center items-center rounded-xl">
+    
+        <a href="/help"><h1 class="px-7 ">Help? Notice!</h1></a>
+    
+      </div>
+      
+      
+    
+    </div>
+
+  
+
+  </div>
+</div>
+<% include ./partials/footer.ejs %>

@@ -1,0 +1,44 @@
+<% include ./partials/header.ejs %>
+
+
+<div class="flex self-center justify-center pb-20 m-20">
+  <div class=" w-[500px] h-[600px] bg-yellow-200  rounded-xl">
+    <div class="flex justify-center">
+      <h1 class="m-[20px] text-3xl font-medium">Register Or Create Account</h1>
+    </div>
+
+  <form action="/register" method="post">                            
+    
+      <input class="m-[20px] ml-20 px-20 py-[10px] rounded-xl" type="text" name="fullname" placeholder="fullname">
+      <input class="m-[20px] ml-20 px-20 py-[10px] rounded-xl" type="text" name="username" placeholder="username">
+      <input class="m-[20px] ml-20 px-20 py-[10px] rounded-xl" type="password" name="password" placeholder="Create unique password">
+      <input class="m-[20px] ml-20 px-20 py-[10px] rounded-xl" type="email" name="email" placeholder="email">
+
+
+      <div class="flex justify-center">
+        <input type="submit" value="Register Account" class="block px-7 py-1 hover:bg-red-600 rounded-xl flex justify-center mb-5" px-[100px] ml-[100px]>
+
+      </div>
+      
+<!-- <input class=" block bg-red-600 px-[50px] ml-[165px] mt-[20px] mb-[20px] rounded-full " type="submit" value="Register"> -->
+ 
+
+<a href="/login" class="ml-[70px] text-red-600" mt-10>If Account Already Exist Go to the Login Page</a>
+
+</form>
+
+<div class="flex justify-center items-center ">
+  <div class=" mt-5 bg-white hover:bg-black text-black hover:text-white flex justify-center items-center rounded-xl">
+
+    <a href="/help"><h1 class="px-7 ">Help? Notice!</h1></a>
+
+  </div>
+  
+  
+
+</div>
+
+  </div>
+
+</div>
+<% include ./partials/footer.ejs %>

@@ -1,0 +1,58 @@
+<% include ./partials/header.ejs %>
+
+<div class="w-full h-screen bg-zinc-800 text-white py-2 px-2">
+    <div class="p-20">
+
+        <div class="flex justify-between ">
+            <a class="text-blue-800" href="/profile"><i class="ri-arrow-drop-left-line"></i>Profile</a>
+                <h1>Profile Edit Page</h1>
+                <a class="text-blue-800" href="/feed"><i class="text-[1.4rem] ri-home-line"></i></a>
+            </div>
+<!-- ............Edit Profile............ -->
+
+
+            <div class="EditPicture flex flex-col items-center mt-20 gap-3">
+
+                <div class="w-20 h-20 rounded-full bg-white overflow-hidden ">
+            <img class="w-full h-full" src="/images/uploads/<%= user.ProfileImage %>" alt="">
+                </div>
+
+
+                <h1 id="EditP">Edit Picture</h1>
+
+            </div>
+
+
+            <!-- Edit Account Details -->
+            <div class="editAccountDetails text-black">
+                <div class="flex justify-center mt-10">
+                    <form action="/update" method="post" enctype="multipart/form-data">
+                        <h1 class="flex justify-center text-white">Edit Account Details</h1>
+                        <input  id="aplyInput" hidden type="file" name="image">
+                        <input class="block px-20 py-2 rounded-xl m-2 text-black bg-white" type="text" name="username" placeholder="username" value="<%= user.username %>">
+                        <input class="block px-20 py-2 rounded-xl m-2 text-black bg-white" type="text" name="name" placeholder="name" value="<%= user.name %>">
+                        <textarea class="block px-20 py-2 rounded-xl m-2 text-black bg-white" type="text" name="Bio" placeholder="Bio"><%= user.Bio %></textarea>
+                        <input class="block px-[120px] py-2 rounded-xl m-2 text-white bg-blue-800 flex justify-center" type="submit" value="Update Details">
+                    </form>
+                </div>
+            </div>
+    </div>
+  
+
+
+</div>
+
+<script>
+document.querySelector("#EditP").addEventListener("click", function(){
+    document.querySelector("#aplyInput").click();
+})
+</script>
+<% include ./partials/footer.ejs %>
+
+<!-- <div class="footer text-white flex justify-between items-center w-full fixed bottom-0 z-[10] bg-zinc-900 px-10 py-3">
+   
+    <a href="/search"><i class="text-[1.4rem] ri-search-line"></i></a>
+    <a href="/upload"><i class="text-[1.4rem] ri-add-box-line"></i></a>
+
+    
+  </div> -->

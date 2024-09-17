@@ -1,0 +1,27 @@
+<% include ./partials/header.ejs %>
+
+
+<div class="w-full h-screen bg-zinc-800 text-wh"> 
+    
+
+<div class="flex flex-wrap gap-10">
+
+    
+
+<% posts.forEach(function(elem){%>
+
+    <div class="w-[20vw]">
+
+        <div class="w-full h-[15vw] bg-sky-200 rounded-lg overflow-hidden hover:scale-150 flex flex-wrap gap-5">
+    <img class="h-full w-full" src="/images/uploads/<%= elem.image %>" alt="">
+        </div>
+   <h1 class="text-red-600"><%= elem.title %></h1>
+   <h1 class="text-white">@<%= elem.user.username %></h1>
+
+    </div>
+<%})%>
+
+</div>
+</div>
+
+<% include ./partials/footer.ejs %>
